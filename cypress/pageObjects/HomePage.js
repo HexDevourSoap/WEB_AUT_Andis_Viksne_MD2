@@ -38,10 +38,25 @@ export class HomePage extends BasePage {
         return cy.get("#btn-book-appointment");
       }
 
+    static get hospitalReadmissionCheck() {
+        return cy.get("#hospital_readmission");
+      }
 
-
-
-
+      static get facilitycheck() {
+            return cy.get("#facility");
+        }
+        static get hospitalReadmissioncheck() {
+            return cy.get("#hospital_readmission");
+        }
+        static get programMedicaidcheck() {
+            return cy.get("#program");
+        }
+        static get dateFieldcheck() {
+            return cy.get("#visit_date");
+        }
+        static get commentFieldcheck() {
+            return cy.get("#comment");
+        }
 
 
 

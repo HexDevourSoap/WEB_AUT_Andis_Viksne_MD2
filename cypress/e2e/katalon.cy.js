@@ -19,13 +19,17 @@ describe('template spec', () => {
     // Select - Medicaid
     HomePage.programMedicaid.click();
     // Set Date value by using the widget - 30
-    HomePage.dateField.type('12/30/2023{esc}');
+    HomePage.dateField.type('30/12/2023{esc}');
     // Set comment - CURA Healthcare Service
     HomePage.commentField.type('CURA Healthcare Service');
     // Click - Book Appointment
     HomePage.bookAppointmentButton.click();
     // Verify - Appointment Confirmation
-    
+    HomePage.facilitycheck.should('have.text', 'Seoul CURA Healthcare Center');
+    HomePage.hospitalReadmissioncheck.should('have.text', 'Yes');
+    HomePage.programMedicaidcheck.should('have.text', 'Medicaid');
+    HomePage.dateFieldcheck.should('have.text', '30/12/2023');
+    HomePage.commentFieldcheck.should('have.text', 'CURA Healthcare Service');
 
 
 
