@@ -35,7 +35,7 @@ describe('template spec', () => {
 
   }); 
 
-  it.only('Appointment history empty', () => {
+  it('Appointment history empty', () => {
    // Click - Make Appointment
    HomePage.makeAppointmentButton.click();
    // Set username and password fields with the demo account credentials
