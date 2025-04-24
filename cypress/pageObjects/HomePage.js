@@ -57,8 +57,19 @@ export class HomePage extends BasePage {
         static get commentFieldcheck() {
             return cy.get("#comment");
         }
-
-
-
+        static get menuButton() {
+            return cy.get("#menu-toggle");
+        }
+        
+        static get sidebarActive() {
+          return cy.get("#sidebar-wrapper");
+        }
+        static get historyButton() {
+          return cy.get("#sidebar-wrapper > ul > li:nth-child(4) > a");
+        }
+        static get appointmentHistory() {
+          return cy.get("#history > div > div:nth-child(1) > div > p");
+        }
+        
 
 }

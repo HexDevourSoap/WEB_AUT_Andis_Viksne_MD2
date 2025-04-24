@@ -35,12 +35,28 @@ describe('template spec', () => {
 
   }); 
 
+  it.only('Appointment history empty', () => {
+   // Click - Make Appointment
+   HomePage.makeAppointmentButton.click();
+   // Set username and password fields with the demo account credentials
+   HomePage.usernameButton.type('John Doe');
+   HomePage.passwordButton.type('ThisIsNotAPassword');
+   // Click - Login
+   HomePage.loginButton.click();
+   // validate the sidebar active class
+   HomePage.menuButton.click();
+   HomePage.sidebarActive.should('have.class', 'active');
+   // Click - History
+  HomePage.historyButton.click();
+  // Validate that - No appointment - is visible
+  HomePage.appointmentHistory.should('be.visible');
+   
 
 
 
 
 
-
+  });
 
 
 
